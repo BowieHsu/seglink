@@ -88,9 +88,9 @@ class SegLinkNet(object):
             
         with slim.arg_scope([slim.conv2d],
                 activation_fn = None,
-                weights_regularizer=slim.l2_regularizer(self.weight_decay), 
+                weights_regularizer = slim.l2_regularizer(self.weight_decay), 
                 weights_initializer = tf.contrib.layers.xavier_initializer(),
-                biases_initializer = tf.zeros_initializer()):
+                biases_initializer  = tf.zeros_initializer()):
             
             # segment scores
             num_cls_pred = 2
